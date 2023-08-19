@@ -17,22 +17,23 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!--! FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/8ec1785cc0.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--! Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <!--! For Scrollbar -->
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e527b2;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body class="font-sans">
     <div
-      class="h-screen w-full fixed backdrop-brightness-50 backdrop-blur-sm z-50"
+      class="h-screen w-full fixed backdrop-brightness-50 backdrop-blur-sm z-50 transition-all hidden"
     >
       <div
         class="h-[300px] md:h-[400px] w-[300px] md:w-[400px] rounded-lg bg-white flex flex-col items-center justify-center fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
@@ -41,7 +42,7 @@
         <p class="text-[#111] text-3xl md:text-4xl font-bold mb-2">
           Congratulations
         </p>
-        <p class="text-[#888888] mb-6">Your Purchase the product</p>
+        <p class="text-[#888888] mb-6">You Purchased the products</p>
         <button
           class="bg-[#E527B2] hover:bg-[#E527B2] btn capitalize text-white px-8 py-3 rounded-lg"
         >
@@ -53,7 +54,7 @@
       class="w-full h-screen bg-[#F9F6E2] flex flex-col gap-6 lg:gap-0 md:flex-row items-center justify-center lg:px-10"
     >
       <div
-        class="lg:w-1/2 flex flex-col items-center justify-center lg:gap-10 gap-3"
+        class="order-2 md:order-1 lg:w-1/2 flex flex-col items-center justify-center lg:gap-10 gap-3"
       >
         <p class="text-[#111] text-lg lg:text-3xl font-medium uppercase">
           ---sale fever---
@@ -73,8 +74,10 @@
           </p>
         </div>
       </div>
-      <div class="w-[80%] md:w-1/2 flex justify-center items-center">
-        <img class="h-full lg:h-[90%]" src="./images/Summer 1.png" alt="" />
+      <div
+        class="order-1 md:order-2 w-[80%] md:w-1/2 flex justify-center items-center"
+      >
+        <img class="lg:w-[80%]" src="./images/Summer 1.png" alt="" />
       </div>
     </section>
     <section class="bg-[#F8F8F8] py-28">
