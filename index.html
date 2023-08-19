@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
+    <link
+      rel="shortcut icon"
+      href="./images/Summer 1.png"
+      type="image/x-icon"
+    />
     <!--! Tailwind -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
@@ -26,27 +31,35 @@
     />
   </head>
   <body>
-    <section class="w-full h-screen bg-[#F9F6E2] flex lg:px-10">
-      <div class="w-1/2 flex flex-col items-center justify-center gap-10">
-        <p class="text-[#111] text-3xl font-medium uppercase">
+    <section
+      class="w-full h-screen bg-[#F9F6E2] flex flex-col gap-6 lg:gap-0 md:flex-row items-center justify-center lg:px-10"
+    >
+      <div
+        class="lg:w-1/2 flex flex-col items-center justify-center lg:gap-10 gap-3"
+      >
+        <p class="text-[#111] text-lg lg:text-3xl font-medium uppercase">
           ---sale fever---
         </p>
-        <p class="text-[#111] text-5xl font-bold leading-tight">
+        <p class="text-[#111] text-lg lg:text-5xl font-bold leading-tight">
           Purchase TK 200 or<br />above & get
           <span class="text-[#E527B2]">20% off</span>
         </p>
-        <div class="flex items-center gap-6">
-          <p class="text-[#111] text-xl font-medium">Use Promo Code</p>
-          <p class="bg-[#E527B2] rounded-lg text-white text-xl px-6 py-2">
+        <div class="flex items-center gap-3 lg:gap-6">
+          <p class="text-[#111] text-lg lg:text-xl font-medium">
+            Use Promo Code
+          </p>
+          <p
+            class="bg-[#E527B2] rounded-lg text-white text-md lg:text-xl px-2 lg:px-6 py-2"
+          >
             SELL200
           </p>
         </div>
       </div>
       <div class="w-1/2 flex justify-center items-center">
-        <img class="h-[90%]" src="./images/Summer 1.png" alt="" />
+        <img class="h-full lg:h-[90%]" src="./images/Summer 1.png" alt="" />
       </div>
     </section>
-    <section class="bg-[#F8F8F8] py-28">
+    <section class="bg-[#F8F8F8] py-28 hidden">
       <div class="w-[80%] mx-auto flex gap-6">
         <div class="w-3/4">
           <p class="text-[#111] text-4xl font-semibold mb-8">Kitchenware</p>
@@ -415,7 +428,8 @@
                 id=""
               />
               <button
-                class="btn bg-[#E527B2] text-white flex-1 font-semibold min-h-0 h-auto rounded-s-none border-[#E527B2] hover:border-[#E527B2] hover:bg-[#E527B2]"
+                class="btn bg-[#E527B2] text-white capitalize flex-1 font-semibold min-h-0 h-auto rounded-s-none border-[#E527B2] hover:border-[#E527B2] hover:bg-[#E527B2] disabled:opacity-20 disabled:bg-[#E527B2] disabled:text-gray-200"
+                disabled
               >
                 Apply
               </button>
@@ -443,7 +457,8 @@
               </p>
             </div>
             <button
-              class="btn bg-[#E527B2] hover:bg-[#E527B2] mt-6 w-full text-white capitalize font-semibold"
+              class="btn bg-[#E527B2] hover:bg-[#E527B2] mt-6 w-full text-white capitalize font-semibold disabled:opacity-20 disabled:bg-[#E527B2] disabled:text-gray-200"
+              disabled
             >
               Make Purchase
             </button>
